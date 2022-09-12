@@ -1,0 +1,83 @@
+// MIXINS
+
+@mixin sticky-footer{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-nav($display:flex,$justify:space-between,$align:center){
+  display: $display;
+  justify-content: $justify ;
+  align-items: $align;
+}
+
+@mixin list-unstyled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+@mixin link-style {
+  display: inline-block;
+  text-decoration: none;
+}
+
+@mixin psevdo-elements {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+}
+@mixin button($bradius:24px,$bgcolor:$main-dark-pink,$ptop:16px,$pright:24px,$pbottom:14px,$pleft:28px) {
+  border-radius: $bradius;
+  background-color:$bgcolor;
+  padding: $ptop $pright $pbottom $pleft;
+
+  // &:hover {
+  //  opacity: $h-opacity;
+  // }
+  // &:active {
+  //   opacity: $a-opacity;
+  // }
+}
+@mixin before-after-d($width:100px,$height:100px,$display:inline-block) {
+  content: "";
+  width: $width;
+  height: $height ;
+  display: $display ; 
+}
+@mixin before-after-p($width:100px,$height:100px,$position:absolute) {
+  content: "";
+  width: $width;
+  height: $height ;
+  position: $position ;
+}
+@mixin bg-img($repeat:no-repeat,$bpcalc-x:0px,$bpcalc-y:0px,$bsize: cover ) {
+background-repeat: $repeat;
+background-position:calc(50% + $bpcalc-x) calc(50% - $bpcalc-y) ;
+background-size: $bsize ;
+}
+@mixin mediya-max($max-width) {
+  @media only screen and (max-width: $max-width) {
+     @content; 
+    }
+}
+@mixin mediya-min($min-width) {
+  @media only screen and (min-width: $min-width) {
+     @content; 
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

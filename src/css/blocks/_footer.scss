@@ -1,0 +1,43 @@
+/*Footer*/
+.site-footer {
+  padding: 13px 0 28px 0;
+  background-color: $main-box-color;
+ .footer-top {
+  @include flex-nav($justify:start);
+ }
+ .footer-list {
+  margin-left: 68px;
+ }
+ .footer-list-item {
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+ }
+ .footer-list-link {
+  font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: $main-text-color;
+ }
+ .phone-number-box {
+  margin-left: auto;
+ }
+ .phone-number {
+  font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+color: $main-text-color;
+ }
+ .footer-text {
+  font-weight: 400;
+font-size: 14px;
+line-height: 17px;
+color: #A8AAB0;
+ }
+ .icon-list {
+  padding-top: 14px;
+  @include flex-nav;
+  width: 132px;
+  margin-left: 307px;
+ }
+}

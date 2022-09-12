@@ -1,0 +1,115 @@
+.product {
+  padding-bottom: 50px;
+  .product-wrappers {
+    width: 1060px;
+    padding: 24px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+  }
+  .card-list {
+    display: flex;
+    width: 946px;
+    flex-wrap: wrap;
+  }
+  .card-list-item {
+    width: 461px;
+   &:nth-child(odd) {
+    margin-right: 24px;
+   }
+
+    .input-text--active {
+      opacity: 0;
+    }
+    .cvadret-input {
+      background-color:$main-box-color ;
+  border: 1px solid #F2F2F2;
+  border-radius: 12px;
+  padding: 20px 18px;
+  margin-right: 20px;
+  width: 100%;
+    }
+  }
+
+  .input-text {
+    margin-top: 24px ;
+    margin-bottom: 14px;
+    font-weight: bold;
+font-size: 16px;
+line-height: 19px;
+color: #3278E1;
+  }
+  .foto-box {
+    display: flex;
+    justify-content: space-between;
+    width: 866px;
+  }
+  .foto {
+    width: 162px;
+height: 118px;
+background: #FFFFFF;
+border: 1px solid #F2F2F2;
+border-radius: 12px;
+  }
+  .textarea {
+    width: 866px;
+height: 248px;
+background-color: #FFFFFF;
+border: 1px solid #F2F2F2;
+border-radius: 12px;
+resize: none;
+padding: 24px;
+  }
+  .btn-group {
+    display: flex;
+    width: 866px ;
+    margin-top: 25px;
+    justify-content: flex-end;
+    .btn-close {
+      background-color: #A8AAB0;
+border-radius: 10px;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+color: #FFFFFF;
+padding: 20px 99px ;
+border: none;
+margin-right: 21px;
+    }
+    .btn-push {
+      background-color: #3279E3;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      display: flex;
+      align-items: center;
+      color: #FFFFFF;
+      padding: 20px 99px ;
+      border: none;
+    }
+  }
+  .product-sum {
+    .product-list {
+      margin: 0;
+    }
+  }
+}
+.cvadret-input {
+  appearance: none;
+}
+.arrow-select {
+  position: relative;
+    }
+    .arrow-select::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 7px;
+  background-image: url("/images/Vector.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 30px;
+  top: 28px;
+    }
