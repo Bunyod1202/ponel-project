@@ -1,0 +1,28 @@
+.about-text {
+  font-weight: 500;
+font-size: 16px;
+line-height: 22px;
+color: #272A39;
+}
+.about-content {
+  display: flex;
+
+  justify-content: space-between;
+  margin-bottom: 140px;
+  .content{
+
+    width: 700px;
+  }
+}
+.about-title {
+  font-weight: 600;
+font-size: 36px;
+line-height: 44px;
+letter-spacing: -0.04em;
+color: #272A39;
+margin-bottom: 28px;
+
+}
+.links {
+  padding: 26px 0;
+}

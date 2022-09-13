@@ -19,6 +19,10 @@ const routes = [
       {
         path: 'request',
         component: () => import('pages/RequestPage.vue')
+      },
+      {
+        path: 'about',
+        component: () => import('pages/AboutUs.vue')
       }
     ]
   },

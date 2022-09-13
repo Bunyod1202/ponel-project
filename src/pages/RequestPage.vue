@@ -3,12 +3,23 @@
 
     <section class="product">
       <div class="container">
-        <p class="links">Главная  >
-          Каталог  >
-          Солнечные электростанции  >
-          на 2 кВт  >
-          Комплект однофазный, 2 кВт, Solax – Jinko Solar >
-          <span>Оформление заявки</span></p>
+        <q-breadcrumbs class="text-brown links">
+      <template v-slot:separator>
+        <q-icon
+          size="1.5em"
+          name="chevron_right"
+          color="primary"
+        />
+      </template>
+
+      <q-breadcrumbs-el label="Главная"  />
+      <q-breadcrumbs-el label="Каталог"  />
+      <q-breadcrumbs-el label="Солнечные электростанции "  />
+      <q-breadcrumbs-el label="на 2 кВт"  />
+      <q-breadcrumbs-el label="Комплект однофазный, 2 кВт, Solax – Jinko Solar" />
+      <q-breadcrumbs-el label="Оформление заявки" />
+    </q-breadcrumbs>
+
           <div class="product-inner">
             <div class="product-wrappers">
               <form class="form" action="https://echo.htmlacademy.ru/courses" method="post" autocomplete="off">
@@ -29,13 +40,8 @@
                 <li class="card-list-item">
                   <p class="input-text">Тип строения</p>
                    <div class="arrow-select">
-                    <select class="cvadret-input select " id="city">
-                      <option value="" class="placeholder" selected disabled>Выберите тип строения</option>
-                      <option value="1497.5">Жилой дом</option>
-                      <option value="1570.5">Дача</option>
-                      <option value="1461">Коммерческое помещение</option>
+                    <q-select class="cvadret-input selects  "  borderless v-model="selectType" :options="selectTypeOptions" label="Выберите тип" />
 
-                    </select>
                    </div>
 
 
@@ -43,92 +49,52 @@
                 <li class="card-list-item">
                   <p class="input-text">Расстояние от места установки ВИЭ до счетчика (м)</p>
                   <div class="arrow-select">
-                    <select class="cvadret-input select " id="city">
-                      <option value="" class="placeholder" selected disabled>Введите растояние до счетчика (м)</option>
-                      <option value="1497.5">до 5 м</option>
-                      <option value="1570.5">от 5 до 10 м</option>
-                      <option value="1461">свыше 15м </option>
-
-                    </select>
+                      <q-select class="cvadret-input selects  "  borderless v-model="distance" :options="distanceOptions" label="Введите растояние до счетчика (м)" />
                    </div>
 
                 </li>
                 <li class="card-list-item">
                   <p class="input-text">Материал несущих стен</p>
                   <div class="arrow-select">
-                    <select class="cvadret-input select " id="city">
-                      <option value="" class="placeholder" selected disabled>Выберите материал несущих стен</option>
-                      <option value="1497.5">Жженый кирпич</option>
-                      <option value="1570.5">Шлакоблок</option>
-                      <option value="1461">Кирпич-сырец</option>
-
-                    </select>
+                         <q-select class="cvadret-input selects  "  borderless v-model="material" :options="materialOptions" label="Выберите материал несущих стен" />
                    </div>
                 </li>
                 <li class="card-list-item">
                   <p class="input-text">Срок эксплуатации электропроводки</p>
                   <div class="arrow-select">
-                    <select class="cvadret-input select " id="city">
-                      <option value="" class="placeholder" selected disabled>Выберите срок эксплуатации электропроводки</option>
-                      <option value="1497.5">до 5 лет</option>
-                      <option value="1570.5">от 5 до 10 лет</option>
-                      <option value="1461">свыше 15лет</option>
-
-                    </select>
+                        <q-select class="cvadret-input selects  "  borderless v-model="exploitation" :options="exploitationOptions" label="Выберите срок эксплуатации электропроводки" />
                    </div>
                 </li>
                 <li class="card-list-item">
                   <p class="input-text">Тип кровли</p>
                   <div class="arrow-select">
-                    <select class="cvadret-input select " id="city">
-                      <option value="" class="placeholder" selected disabled>Выберите тип кровли</option>
-                      <option value="1497.5">Профнастил</option>
-                      <option value="1570.5">Черепица</option>
-                      <option value="1461">Асбестовые листы (шифер)</option>
-
-                    </select>
+                       <q-select class="cvadret-input selects  "  borderless v-model="roofing" :options="roofingOptions" label="Выберите тип кровли" />
                    </div>
                 </li>
                 <li class="card-list-item">
                   <p class="input-text">Сечение электропроводов</p>
                   <div class="arrow-select">
-                    <select class="cvadret-input select " id="city">
-                      <option value="" class="placeholder" selected disabled>Выберите сечение провода</option>
-                      <option value="1497.5">2 мм</option>
-                      <option value="1570.5">2-5 мм</option>
-                      <option value="1461">5-10 мм</option>
-                    </select>
+                      <q-select class="cvadret-input selects  "  borderless v-model="wireSection" :options="wireSectionOptions" label="Выберите сечение провода" />
                    </div>
                 </li>
                 <li class="card-list-item">
                   <p class="input-text">Тип перекрытия</p>
                   <div class="arrow-select">
-                    <select class="cvadret-input select " id="city">
-                      <option value="" class="placeholder" selected disabled>Выберите тип прекрития</option>
-                      <option value="1497.5">ЖБ плиты</option>
-                      <option value="1570.5">Деревяные срубы</option>
-                      <option value="1461">Металлические фермы</option>
-                    </select>
+                       <q-select class="cvadret-input selects  "  borderless v-model="precritia" :options="precritiaOptions" label="Выберите тип прекрития" />
                    </div>
                 </li>
                 <li class="card-list-item">
                   <p class="input-text">Материал электропроводки</p>
                   <div class="arrow-select">
-                    <select class="cvadret-input select " id="city">
-                      <option value="" class="placeholder" selected disabled>Выберите материал электропроводки</option>
-                      <option value="1497.5">Медь</option>
-                      <option value="1570.5">Алюминий</option>
-                    </select>
+
+                      <q-select class="cvadret-input selects  "  borderless v-model="electricalWiring" :options="electricalWiringOptions" label="Выберите материал электропроводки" />
                    </div>
                 </li>
                  <li class="card-list-item">
                   <p class="input-text">Тип крыши</p>
                   <div class="arrow-select">
-                    <select class="cvadret-input select " id="city">
-                      <option value="" class="placeholder" selected disabled>Выберите тип крыши</option>
-                      <option value="1497.5">Плоская</option>
-                      <option value="1570.5">Наклонная</option>
-                    </select>
+
+                     <q-select class="cvadret-input selects  "  borderless v-model="roofs" :options="roofsOptions" label="Выберите тип крыши" />
                    </div>
                 </li>
                 <li class="card-list-item">
@@ -139,11 +105,12 @@
                 <li class="card-list-item">
                   <p class="input-text">Место установки ВИЭ</p>
                   <div class="arrow-select ">
-                    <select class="cvadret-input select " id="city">
+                    <!-- <select class="cvadret-input select " id="city">
                       <option value="" class="placeholder" selected disabled>Выберите место установки</option>
                       <option value="1497.5">На земле</option>
                       <option value="1570.5">На крыше</option>
-                    </select>
+                    </select> -->
+                       <q-select class="cvadret-input selects  "  borderless v-model="place" :options="placeOptions" label="Выберите тип крыши" />
                    </div>
                 </li>
                 <li class="card-list-item">
@@ -229,19 +196,51 @@
 </div>
 
 </template>
-<script>
-import { defineComponent } from 'vue'
+<script setup>
+import { ref } from "vue";
+import { useI18n } from 'vue-i18n'
+  let selectType = ref(null)
+     let selectTypeOptions = [
+        'Жилой дом', 'Дача', 'Коммерческое помещение'
+      ]
+       let distance = ref(null)
+     let distanceOptions = [
+        'до 5 м', 'от 5 до 10 м', 'свыше 15м'
+      ]
+      let material = ref(null)
+     let materialOptions = [
+        'Жженый кирпич', 'Шлакоблок', 'Кирпич-сырец'
+      ]
+   let exploitation = ref(null)
+     let exploitationOptions = [
+        'до 5 лет', 'от 5 до 10 лет', 'свыше 15лет'
+      ]
+   let roofing = ref(null)
+     let roofingOptions = [
+        'Профнастил', 'Черепица', 'Асбестовые листы (шифер)'
+      ]
+       let wireSection = ref(null)
+     let wireSectionOptions = [
+        '2 мм', '2-5 мм', '5-10 мм'
+      ]
+   let precritia = ref(null)
+     let precritiaOptions = [
+        'ЖБ плиты', 'Деревяные срубы', 'Металлические фермы'
+      ]
+      let electricalWiring = ref(null)
+     let electricalWiringOptions = [
+        'Медь', 'Алюминий'
+      ]
+      let roofs = ref(null)
+     let roofsOptions = [
+        'Плоская', 'Наклонная'
+      ]
+     let place = ref(null)
+     let placeOptions = [
+        'На земле', 'На крыше'
+      ]
 
-export default defineComponent({
-  name: 'IndexPage',
-
-   setup () {
- return {
-
-  }
-
-   }
 
 
-})
+
 </script>

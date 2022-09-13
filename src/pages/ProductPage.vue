@@ -2,11 +2,23 @@
  <div>
     <section class="product">
       <div class="container">
-        <p class="links">Главная  >
-          Каталог  >
-          Солнечные электростанции  >
-          на 2 кВт  >
-          <span>Комплект однофазный, 2 кВт, Solax – Jinko Solar</span></p>
+         <q-breadcrumbs class="text-brown links">
+      <template v-slot:separator>
+        <q-icon
+          size="1.5em"
+          name="chevron_right"
+          color="primary"
+        />
+      </template>
+
+      <q-breadcrumbs-el label="Главная"  />
+      <q-breadcrumbs-el label="Каталог"  />
+      <q-breadcrumbs-el label="Солнечные электростанции "  />
+      <q-breadcrumbs-el label="на 2 кВт"  />
+      <q-breadcrumbs-el label="Комплект однофазный, 2 кВт, Solax – Jinko Solar" />
+
+    </q-breadcrumbs>
+      
           <div class="product-inner">
             <div class="product-wrapper">
               <h2 class="product-name">Комплект однофазный, 2 кВт, Solax – Jinko Solar</h2>

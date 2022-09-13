@@ -84,4 +84,5 @@ export default {
   choose_a_plan: 'Rejani tanlang',
   recommended_panel_power: 'Tavsiya etilgan panel quvvati',
 
+  compensation_is_provided: "kompensatsiya faqat yangi erlarni o'zlashtirish jarayonida vertikal quduqlarga o'rnatilgan suv nasoslari uchun qayta tiklanadigan energiya manbalarini o'rnatish uchun taqdim etiladi.",
 }

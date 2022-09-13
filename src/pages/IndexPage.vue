@@ -111,7 +111,7 @@
 
                   <p class="itogo">{{$t("total")}}</p>
                   <p class="summa">{{$t("amount_compensation")}}<strong id="resultSum">{{testResult}}</strong></p>
-                  <p id="fifty-warning">{{znak}}</p>
+                  <p id="fifty-warning">{{$t(znak)}}</p>
                 </form>
 
               </div>
@@ -156,7 +156,7 @@
                 </tbody>
               </table>
               <p class="itogo">{{$t("total")}}</p>
-              <p class="summa"><strong >{{elrasresultSum}}</strong></p>
+              <p class="summa"><strong >{{$t(elrasresultSum)}}</strong></p>
               </div>
             </div>
           </div>
@@ -349,7 +349,7 @@ function waterPanels() {
 
   let testResult = ref(`_`);
   let summa = ref(0)
- let add = ref('компенсация предоставляется только при установке возобновляемых источников электроэнергии для  водяных насосов, установленными в вертикальных скважинах при освоении новых земель')
+ let add = ref("compensation_is_provided")
   let znak = ref('')
 
 function samsum() {
@@ -443,7 +443,8 @@ function rassum(){
 
   let elnumber = rangeSum.toLocaleString()
   // console.log(elnumber.toFixed(2));
-  this.elrasresultSum = `${elnumber} сум  в месяц`
+  let summaContent ="soum_per_month"
+  this.elrasresultSum = `${elnumber} ${summaContent}`
 
   for (let i = 1; i <= rasInputRangeNumber; i++) {
 

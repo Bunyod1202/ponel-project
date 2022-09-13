@@ -13,7 +13,7 @@
                 <a href="#/category" class="list-link">{{$t("header.water_heaters")}}</a>
               </li>
               <li class="list-item">
-                <a href="#" class="list-link">{{$t("header.about_us")}}</a>
+                <a href="#/about" class="list-link">{{$t("header.about_us")}}</a>
               </li>
               <li class="list-item">
                 <a href="#" class="list-link">{{$t("header.regulations")}}</a>
