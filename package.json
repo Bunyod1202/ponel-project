@@ -7,7 +7,7 @@
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
-    "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" --ignore-path .gitignore",
+    "format": "prettier --write \"**/*.{js,vue,scss,html,md,json}\" \"json-server data/db.json -m ./node_modules/json-server-auth\" --ignore-path .gitignore",
     "test": "echo \"No test specified\" && exit 0",
     "json": "json-server data/db.json -m ./node_modules/json-server-auth --port 7777"
   },
