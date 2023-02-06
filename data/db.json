@@ -1,0 +1,106 @@
+{
+  "users": [
+    {
+      "email": "bunyodbunyod035@gmail.com",
+      "password": "$2a$10$t/uxveSZUWd76UV/5MWFk.uQpDWwKKxXSqW4oVmWW3PvsSjSmj4wO",
+      "firstname": "Bunyod",
+      "lastname": "Agzamxojayev",
+      "id": 1
+    }
+  ],
+  "category": [
+    {
+      "productName": "Asus",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "productName": "Apple",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "productName": "Samsung",
+      "userId": 1,
+      "id": 3
+    }
+  ],
+  "product": [
+    {
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXUpdR8eqMvXM5R8kwx-hMfA2HCwEShKcxMw&usqp=CAU",
+      "product_name": "turbo",
+      "product_price": "1000000",
+      "product_kv": "2",
+      "product_category": {
+        "label": "Samsung",
+        "id": 3
+      },
+      "product_type": {
+        "label": "Quyosh panel",
+        "id": 1
+      },
+      "id": 5
+    },
+    {
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8VAF5D9uxvPbqyU2boUQ6C9VsSRC48S8XSQ&usqp=CAU",
+      "product_name": "nitro",
+      "product_price": "1000000",
+      "product_kv": "100",
+      "product_category": {
+        "label": "Asus",
+        "id": 1
+      },
+      "product_type": {
+        "label": "Suv isitgich panel",
+        "id": 2
+      },
+      "id": 6
+    },
+    {
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwQlEhYg-HDHISMha6WHVoAhyOoRxxoh8MvA&usqp=CAU",
+      "product_name": "bass",
+      "product_price": "1000000",
+      "product_kv": "1",
+      "product_category": {
+        "label": "Apple",
+        "id": 2
+      },
+      "product_type": {
+        "label": "Quyosh panel",
+        "id": 1
+      },
+      "id": 7
+    },
+    {
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrsS2qVLlnq9IuRAYnDiE2rbjCut0Da1CCDg&usqp=CAU",
+      "product_name": "gaz",
+      "product_price": "5000000",
+      "product_kv": "1",
+      "product_category": {
+        "label": "Apple",
+        "id": 2
+      },
+      "product_type": {
+        "label": "Quyosh panel",
+        "id": 1
+      },
+      "id": 8
+    },
+    {
+      "img_url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrsS2qVLlnq9IuRAYnDiE2rbjCut0Da1CCDg&usqp=CAU",
+      "product_name": "gaz",
+      "product_price": "7000000",
+      "product_kv": "1",
+      "product_category": {
+        "label": "Apple",
+        "id": 2
+      },
+      "product_type": {
+        "label": "Quyosh panel",
+        "id": 1
+      },
+      "id": 9
+    }
+  ],
+  "order": []
+}
